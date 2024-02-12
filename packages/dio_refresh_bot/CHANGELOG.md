@@ -9,7 +9,7 @@
 ## 2.1.0
 
 - **FEAT**: add optional debugLog for refreshToken request.
-- **FIX**: handle `refreshToken` error when his type is not `DioError`.
+- **FIX**: handle `refreshToken` error when his type is not `DioException`.
 
 ## 2.0.0+1
 

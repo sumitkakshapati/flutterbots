@@ -13,7 +13,7 @@ class MockRequestOptions extends Mock implements RequestOptions {}
 
 class MockResponse<T> extends Mock implements Response<T> {}
 
-class MockDioError extends Mock implements DioError {}
+class MockDioError extends Mock implements DioException {}
 
 class MockException extends Mock implements Exception {}
 
@@ -271,7 +271,7 @@ void main() {
       expect(botTokenStorage.read(), mockAuthToken);
     });
 
-    test('[onError] refresh token throwing an error other than DioError',
+    test('[onError] refresh token throwing an error other than DioException',
         () async {
       when(() => mockAuthToken.accessToken).thenReturn('access-token');
       when(() => mockAuthToken.tokenType).thenReturn('bearer');
